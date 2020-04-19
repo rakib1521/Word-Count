@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Count</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <center><h1>Result</h1></center>
+    <div class="container" class="row">
+      <div  class="col-6">
+      <h2>YOUR TEXT contains {{input_text_list}} Word</h2>
+
+      <h2>your typed text:</h2>
+      {{input_text}}
+
+      <h3>Words with count</h3>
+      {% for word,total in sorted_list %}
+        {{word}}
+
+        {{total}}
+        <br>
+      {% endfor %}
+      </div>
+    </div>
+<center>
+    <a href="{% url 'home' %}">HOME</a>
+    <a href="{% url 'about' %}">ABOUT</a>
+</center>
+
+  </body>
+</html>
